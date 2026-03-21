@@ -1,0 +1,66 @@
+!<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planszland - Sklep z Grami Planszowymi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+            <div class="logo-section">
+                <h1 class="logo">Planszland</h1>
+                <p class="tagline">Zbiór gier planszowych</p>
+            </div>
+            </a>    
+            <div class="header-actions">
+                <button class="btn btn-cart" id="cartBtn">🛒 Koszyk <span class="cart-count">0</span></button>
+                <div class="auth-buttons">
+                    <button class="btn btn-login">Zaloguj się</button>
+                    <button class="btn btn-register">Zarejestruj się</button>
+                    <button class="btn btn-logout" style="display: none;">Wyloguj się</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <form class="add-product-form" id="addProductForm">
+            <h2>Dodaj nową grę</h2>
+            <label for="productName">Nazwa gry:</label>
+            <input type="text" id="productName" class="form-input" placeholder="Nazwa gry" required>
+            <label for="productPublisher">Wydawnictwo:</label>
+            <input type="text" id="productPublisher" class="form-input" placeholder="Wydawnictwo" required>
+            <label for="productPrice">Cena (zł):</label>
+            <input type="number" id="productPrice" class="form-input" min="0" placeholder="Cena (zł)" required>
+            <label for="productDescription">Opis gry:</label>
+            <input type="text" id="productDescription" class="form-input" placeholder="Opis gry" required>
+            <label for="productType">Rodzaj gry:</label>
+            <select id="productType" class="form-input" required>
+                <option value="strategiczna">Strategiczna</option>
+                <option value="zRodzina">Z Rodziną</option>
+                <option value="zeZnajomymi">Ze Znajomymi</option>
+            </select>
+            <label for="productPlayers">Liczba graczy:</label>
+            <select id="productPlayers" class="form-input" required>
+                <option value="1">1 osoba</option>
+                <option value="2">2 osoby</option>
+                <option value="4">4-7 osób</option>
+                <option value="5+">8+ osób</option>
+            </select>
+            <button type="submit" class="btn btn-add btn-edit-product">Dodaj grę</button>
+        </form>
+            
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>2026 Planszland - Sklep z Grami Planszowymi</p>
+            <p>Strona stworzona na potrzeby kursu PIWo. Autor: Witold Wojciechowski.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

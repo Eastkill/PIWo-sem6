@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planszland - Sklep z Grami Planszowymi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+            <div class="logo-section">
+                <h1 class="logo">Planszland</h1>
+                <p class="tagline">Zbiór gier planszowych</p>
+            </div>
+            </a>
+            <div class="header-actions">
+                <button class="btn btn-cart" id="cartBtn">🛒 Koszyk <span class="cart-count">0</span></button>
+                <div class="auth-buttons">
+                    <button class="btn btn-login">Zaloguj się</button>
+                    <button class="btn btn-register">Zarejestruj się</button>
+                    <button class="btn btn-logout" style="display: none;">Wyloguj się</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="filters-sidebar">
+            <div class="filters-header">
+                <h2>Filtry</h2>
+                <button class="btn-reset" id="resetFilters">Resetuj</button>
+            </div>
+
+
+            <details class="filter-group">
+                <summary class="filter-label">Cena</summary>
+                <input type="range" id="priceMin" min="0" max="500" value="0" class="filter-input">
+                <input type="range" id="priceMax" min="0" max="500" value="500" class="filter-input">
+                <div class="price-display">
+                    <span id="priceMinDisplay">0</span> zł - <span id="priceMaxDisplay">500</span> zł
+                </div>
+            </details>
+
+            <details class="filter-group">
+                <summary class="filter-label">Rodzaj gry</summary>
+                <div class="filter-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameType" value="Strategiczna">Strategiczna
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameType" value="ZRodzina">Z Rodziną
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameType" value="ZeZnajomymi">Ze znajomymi
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameType" value="Karcianka">Karcianka
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameType" value="RPG">RPG
+                    </label>
+                </div>
+            </details>
+
+            <details class="filter-group">
+                <summary class="filter-label">Liczba graczy</summary>
+                <div class="filter-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="players" value="2">2 osoby
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="players" value="3-4">3-4 osoby
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="players" value="5+">5+ osób
+                    </label>
+                </div>
+            </details>
+
+            <details class="filter-group">
+                <summary class="filter-label">Wydawnictwo</summary>
+                <input type="text" id="publisherFilter" placeholder="Wpisz wydawnictwo..." class="filter-input">
+            </details>
+
+            <details class="filter-group">
+                <summary class ="filter-label">
+                Czas gry
+                </summary>
+                <div class="filter-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameTime" value="30">Do 30 minut
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameTime" value="60">30-60 minut
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameTime" value="120">60-120 minut
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="gameTime" value="120+">Powyżej 120 minut
+                    </label>
+                </div>
+            </details>
+
+            <div class="filter-group">
+                <label class="filter-label">Szukaj w opisie</label>
+                <input type="text" id="descriptionSearch" placeholder="Słów kluczowe..." class="filter-input">
+            </div>
+        </aside>
+
+        <section class="products-section">
+            <div class="products-header">
+                <h2>Gry planszowe</h2>
+                <div class="sort-controls">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Najnowsze</option>
+                        <option value="price-asc">Cena: od najtańszych</option>
+                        <option value="price-desc">Cena: od najdroższych</option>
+                        <option value="name-asc">Nazwa: A-Z</option>
+                        <option value="name-desc">Nazwa: Z-A</option>
+                        <option value="rating">Najwyżej oceniane</option>
+                    </select>
+                </div>
+                <a href = "index2.html"><button class="btn btn-add-product" id="addProductBtn">➕ Dodaj nową pozycję</button></a>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <div class="product-card" data-id="1">
+                    <div class="product-image">
+                        <img src="https://dragoneye.pl/images/catan-gra-planszowa-2025.jpg" alt="Catan">
+                        <span class="product-badge">Nowa</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Catan</h3>
+                        <p class="product-type">📌 Strategiczna</p>
+                        <div class="product-meta">
+                            <span class="meta-item">👥 2-4 osoby</span>
+                            <span class="meta-item">⏱️ 60 min</span>
+                        </div>
+                        <p class="product-publisher">Wydawca: Z-Man Games</p>
+                        <p class="product-description">Klasyczna gra strategiczna, w której gracze budują osady na fikcyjnej wyspie Catan. Gra rozwijająca strategiczne myślenie.</p>
+                        <div class="product-footer">
+                            <span class="product-price">89,99 zł</span>
+                            <div class="product-actions">
+                                <button class="btn btn-view">👁️ Szczegóły</button>
+                                <button class="btn btn-add-cart">🛒 Do koszyka</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="2">
+                    <div class="product-image">
+                        <img src="https://image.ceneostatic.pl/data/products/31327670/i-wsiasc-do-pociagu-europa.jpg" alt="Wsiąśc do pociągu: Europa">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Wsiąśc do pociągu: Europa</h3>
+                        <p class="product-type">📌 Z Rodziną</p>
+                        <div class="product-meta">
+                            <span class="meta-item">👥 2-5 osób</span>
+                            <span class="meta-item">⏱️ 45 min</span>
+                        </div>
+                        <p class="product-publisher">Wydawca: Days of Wonder</p>
+                        <p class="product-description">Podróżuj po Europie i buduj linie kolejowe! Gra łączy prostą mechaniką z głęboką strategią.</p>
+                        <div class="product-footer">
+                            <span class="product-price">129,99 zł</span>
+                            <div class="product-actions">
+                                <button class="btn btn-view" onclick="window.location.href='index2.html?id=2'">👁️ Szczegóły</button>
+                                <button class="btn btn-add-cart">🛒 Do koszyka</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="3">
+                    <div class="product-image">
+                        <img src="https://image.ceneostatic.pl/data/products/42202300/i-tajniacy.jpg" alt="Tajniacy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tajniacy</h3>
+                        <p class="product-type">📌 Ze znajomymi</p>
+                        <div class="product-meta">
+                            <span class="meta-item">👥 4+ osób</span>
+                            <span class="meta-item">⏱️ 15 min</span>
+                        </div>
+                        <p class="product-publisher">Wydawca: Czech Games</p>
+                        <p class="product-description">Gra słowno-asocjacyjna dla grup. Idealna do wieczorów towarzyskich i konkurencji między zespołami.</p>
+                        <div class="product-footer">
+                            <span class="product-price">39,99 zł</span>
+                            <div class="product-actions">
+                                <button class="btn btn-view">👁️ Szczegóły</button>
+                                <button class="btn btn-add-cart">🛒 Do koszyka</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>2026 Planszland - Sklep z Grami Planszowymi</p>
+            <p>Strona stworzona na potrzeby kursu PIWo. Autor: Witold Wojciechowski.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
