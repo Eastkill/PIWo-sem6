@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.list-object{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.list-input{
+ width: 10%;
+}
+.list-text{
+
+}
+.list-delete{
+    width: 10%;
+}
+details summary{
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-weight: bold;
+    display:flex;
+}

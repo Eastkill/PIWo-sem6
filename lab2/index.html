@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lab2 - ToDo List</h1>
+    <div id="app">
+        <details>
+            <summary><p>Lista Podstawowa</p>
+            <button id="deleteList">Usuń listę</button>
+            </summary>
+                    <input type="text" id="taskInput" placeholder="Wpisz nowe zadanie">
+        <button id="addTaskBtn" onclick="addTask(list)">Dodaj zadanie</button>
+            <ul id="basicList">
+                <li class="list-object"><input class = "list-input" type="checkbox"><p class = "list-text">Podstawowe zadanie 1</p><button class="delete list-delete">Usuń</button></li>
+                <li class="list-object"><input class = "list-input" type="checkbox"><p class = "list-text">Podstawowe zadanie 2</p><button class="delete list-delete">Usuń</button></li>
+            </ul>
+        </details>
+        <ul id="taskList"></ul>
+    </div>
+    <div id ="Trashbin">
+        <h2>Kosz</h2>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
