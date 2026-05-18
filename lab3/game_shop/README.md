@@ -1,1 +1,1 @@
-run npm run dev
+https://game-shop-neon-eight.vercel.app/games
